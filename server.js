@@ -55,6 +55,13 @@ app.get('/bad', (req, res) => {
   });
 });
 
+app.get('/projects', (req, res) => {
+   res.render('projects.hbs', {
+       projectName: 'Heroku project',
+       projectDetails: 'Learn how to use Heroku'
+   }); 
+});
+
 app.listen(port, () => {
   console.log(`Server is up on port ${port}`);
 });
